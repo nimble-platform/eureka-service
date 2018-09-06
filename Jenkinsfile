@@ -15,6 +15,6 @@ node ('nimble-jenkins-slave') {
         sh 'kubectl apply -f deploy.yaml -n prod --validate=false'
         sh 'kubectl apply -f svc.yaml -n prod --validate=false'
         sh 'sleep 60'
-        sh 'kubectl -n prod logs deploy/delegate-service -c delegate-service'
+        sh 'kubectl -n prod logs deploy/eureka-service -c eureka-service'
     }
 }
