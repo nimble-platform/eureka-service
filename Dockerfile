@@ -8,8 +8,8 @@ RUN cd /tomcat/webapps &&\
   jar xf eureka-server-1.3.1.war &&\
   rm eureka-server-1.3.1.war
 
-# ADD config.properties /tomcat/webapps/eureka/WEB-INF/classes/config.properties
-# ADD eureka-client-test.properties /tomcat/webapps/eureka/WEB-INF/classes/eureka-client-test.properties
+ADD config.properties /tomcat/webapps/eureka/WEB-INF/classes/config.properties
+ADD eureka-client.properties /tomcat/webapps/eureka/WEB-INF/classes/eureka-client-prod.properties
 ADD eureka-server.properties /tomcat/webapps/eureka/WEB-INF/classes/eureka-server-prod.properties
 
 ENTRYPOINT ["/tomcat/bin/catalina.sh"]
